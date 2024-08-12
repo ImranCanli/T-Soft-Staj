@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.denemecontainer{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: white;
+width: 20vw;
+height: 25vh;
+position: relative;
+flex-direction: column;
+overflow: hidden;
+}
+
+.uppercover{
+    width: 100%;
+    height: 20%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    z-index: 4;
+}
+
+.denemecontainer::before{
+content: "";
+background-color: #fff;
+width: 100%;
+height: 50%;
+position: absolute;
+top: 0;
+z-index: 2;
+}
+
+.bgBlack{
+background-color: black;
+margin: 0;
+padding: 0;
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.circle{
+background-color: #c49f77;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 10%;
+flex-direction: row;
+z-index: 1;
+}
+
+.innercircle{
+display: flex;
+flex-direction: row;
+background-color: #fff;
+width: 120px;
+height: 120px;
+border-radius: 50%;
+}
+
+.rollcontainer{
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    z-index: 3;
+    padding: 0;
+    margin: 0;
+}
+
+.start{
+position: absolute;
+left: 0;
+background-color: #c49f77;
+width: 40px;
+height: 40px;
+bottom: 0;
+border-radius: 50%;
+z-index: 3;
+}
+
+.end{
+position: absolute;
+right: 0;
+background-color: #c49f77;
+width: 40px;
+height: 40px;
+bottom: 0;
+border-radius: 50%;
+z-index: 3;
+}
