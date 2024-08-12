@@ -1,1 +1,1 @@
-1. [Tasarımlara Ulaşmak İçin](https://ImranCanli.github.io/T-Soft-Staj/)
+1. [Tasarımlara Ulaşmak İçin](https://ImranCanli.github.io/T-Soft-Staj/me)
