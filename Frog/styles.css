@@ -1,0 +1,248 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.bgBlack{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footLayout{
+    position: absolute;
+    top: 420px;
+    width: 100px;
+    height: 40px;
+}
+
+.frogContainer{
+    width: 350px;
+    height: 350px;
+    background-color: #bbedef;
+    position: absolute;
+    overflow: hidden;
+    top: 290px;
+    z-index: -1;
+}
+
+.frogRockRight{
+    background-color: #890000;
+    width: 140px;
+    height: 350px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 100%;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    z-index: 0;
+}
+
+.frogRockLeft{
+    background-color: #890000;
+    width: 140px;
+    height: 350px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 100%;
+    position: absolute;
+    top: 400px;
+    right: 50%;
+    z-index: 0;
+}
+
+.frogEyeBallLeft{
+    background-color: #048702;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 6;
+    top: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frogEyeBallRight{
+    background-color: #048702;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 6;
+    top: -5px;
+    left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frogInnerEye{
+    width: 23px;
+    height: 23px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 7;
+}
+
+.BullsEye{
+    top: 8px;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 8;
+}
+
+.frogEyeBall:nth-child(2){
+    left: 380px;
+}
+
+.frogMouthGreen{
+    background-color: #048702;
+    width: 45px;
+    height: 61px;
+    border-radius: 50%;
+    z-index: 1;
+    left: -2px;
+    position: absolute;
+    top: -7px;
+}
+
+.frogMouthBlack{
+    position: absolute;
+    top: 4px;
+    width: 40px;
+    left: 10px;
+    height: 60px;
+    background-color: black;
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.frogHead{
+    width: 60px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: 330px;
+    background-color: #048702;
+    z-index: 5;
+}
+
+.frogBack{
+    width: 95px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #048702;
+    top: 355px;
+    z-index: 3;
+}
+
+.frogBackBlack{
+    width: 99px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: black;
+    top: 358px;
+    z-index: 2;
+}
+
+.frogRear{
+    top: 362px;
+    position: absolute;
+    width: 110px;
+    height: 73px;
+    background-color: #048702;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.belly{
+    position: absolute;
+    width: 70px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #9cfd9d;
+    top: 360px;
+    z-index: 4;
+}
+
+.footContainer{
+    width: 2px;
+    height: 0;
+    /* position: absolute;
+    top: 34%; */
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 100px solid transparent;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+}
+
+.start{
+    top: -5px;
+    left: -40px;
+    transform: rotate(5deg) translateX(1px);
+}
+
+.end{
+    top: -5px;
+    right: -20px;
+    transform: rotate(-5deg) translateX(1px);
+}
+
+.footContainer:nth-child(2){
+    left: -15px;
+}
+
+.footContainer:nth-child(3){
+    left: 15px;
+}
+
+.finger{
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 30px solid #048702;
+}
+
+.finger:first-child{
+    border-left: 1px solid transparent;
+    transform: rotate(18deg) translateY(-2px) translateX(2px);
+}
+
+
+.finger:nth-child(2){
+    transform: rotate(5deg) translateY(-2px) translateX(1px);
+}
+
+.finger:nth-child(3){
+    transform: rotate(-5deg) translateY(-2px);
+}
+
+.finger:last-child{
+    border-right: 1px solid transparent;
+    transform: rotate(-18deg) translateY(-2px) translateX(-1px);
+}
+
+.cover{
+    width: 350px;
+    height: 350px;
+    background-color: black;
+    position: absolute;
+    bottom: -30px;
+    z-index: 9;
+}
+
