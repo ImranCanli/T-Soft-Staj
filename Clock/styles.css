@@ -1,0 +1,240 @@
+:root{
+    --changeSeconds: 0deg;
+    --changeSecondsEnd: 450deg;
+
+    --changeMinute: 0deg;
+    --changeMinuteEnd: 450deg;
+
+    --changeHours: 0deg;
+    --changeHoursEnd: 450deg;
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('./Fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'poppins-light';
+    src: url('./Fonts/Poppins-Light.ttf');
+}
+
+body{
+    background: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'poppins';
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.light{
+    color: black;
+    background-color: white;
+}
+
+.uiswitch{
+    border: none;
+    outline: none;
+    background: white;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dayofMonth{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dayofMonthLight{
+    background: black;
+}
+
+.uiswitchLight{
+    background-color: black;
+    color: white;
+}
+
+.dayinMonth{
+    color: black;
+}
+
+.dayinMonthLight{
+    color: white;
+}
+
+.textContainer{
+    width: 100%;
+    position: absolute;
+    top: 85%;
+}
+
+.digitalClockContainer{
+    margin-bottom: -30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    font-size: large;
+    font-family: 'poppins-bold';
+}
+
+.dateContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    font-size: small;
+    letter-spacing: 0cap; 
+    font-family: 'poppins-light';
+}
+
+.clockContainer{
+    border-radius: 50%;
+    margin-left: 50px;
+    position: absolute;
+    height: 55vw;
+    width: 55vw;
+    max-width: 500px;
+    max-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    top: 25%;
+}
+
+.hour{
+    width: 30%;
+    height: 4px;
+    transform-origin: right;
+    background-color: white;
+    margin-left: 20%;
+    transform: rotate(90deg);
+    animation-name: hourspin;
+    animation-duration: 43200s;
+    /* animation-duration: 3600s; */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.minute{
+    width: 40%;
+    height: 3px;
+    background-color: white;
+    transform-origin: right;
+    position: absolute;
+    top: 50%;
+    margin-left: 10%;
+    left: 0;
+    transform: rotate(90deg);
+    animation-name: minutespin;
+    animation-duration: 3600s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.second{
+    width: 50%;
+    height: 2px;
+    background-color: red;
+    transform-origin: right;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: 1;
+    transform: rotate(90deg);
+    animation-name: second;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.dotRed{
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.dotWhite{
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.colorLight{
+    color: black;
+}
+
+.textContainerLight{
+    color: #000;
+}
+
+.dotWhiteLight{
+    background-color: black;
+}
+
+.lightMinute{
+    background-color: #000;
+}
+
+.lightHour{
+    background-color: #000;
+}
+
+@keyframes second {
+    0%{
+        transform: rotate(var(--changeSeconds));
+    }
+    100%{
+        transform: rotate(var(--changeSecondsEnd));
+    }
+}
+
+@keyframes minutespin {
+    0%{
+        transform: rotate(var(--changeMinute));
+    }
+    100%{
+        transform: rotate(var(--changeMinuteEnd));
+    }
+}
+
+@keyframes hourspin {
+    0%{
+        transform: rotate(var(--changeHours));
+    }
+    100%{
+        transform: rotate(var(--changeHoursEnd));
+    }
+}

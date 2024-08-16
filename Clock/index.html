@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clock</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+    <button onclick="toggleTheme()" class="uiswitch" id="uiswitch">Mod</button>
+    <div class="clockContainer">
+        <div class="dotRed">
+            <div id="dotWhite" class="dotWhite"></div>
+        </div>
+        <span id="hour" class="hour"></span>
+        <span id="minute" class="minute"></span>
+        <span id="second" class="second"></span>
+    </div>
+    <div class="textContainer">
+        <div class="digitalClockContainer"><p class="hourText"></p>&nbsp;:&nbsp;<p class="minuteText"></p></div>
+        <div class="dateContainer"><p class="text"></p>&nbsp;<div class="dayofMonth" id="dayofMonth"><p class="dayinMonth" id="dayinMonth"></p></div></div>
+    </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
