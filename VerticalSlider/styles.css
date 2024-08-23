@@ -1,0 +1,171 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'New Amsterdam';
+}
+
+.fullscrn{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.captionsCont{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    /* scroll-snap-type: y mandatory; */
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.Eagle,
+.castle,
+.flower,
+.sky
+{
+    background-color: #ffb866;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 6px;
+}
+
+h1{
+    font-size: xxx-large;
+    color: white;
+}
+
+p{
+    color: black;
+    margin-top: -25px;
+    letter-spacing: 3px;
+}
+
+.castle{
+    background-color: #252e33;
+}
+
+.castle p{
+    color: white;
+}
+
+.flower{
+    background-color: #fd3555;
+}
+
+.flower p{
+    color: white;
+}
+
+.sky{
+    background-color: #2a86ba;
+}
+
+.sky p{
+    color: white;
+}
+
+
+
+
+.imgCont{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* scroll-snap-type: y mandatory; */
+}
+
+.imgCont::-webkit-scrollbar{
+    display: none;
+}
+
+.buttonCont{
+    width: 95px;
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.firstCol, .secondCol{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.firstCol{
+    align-items: start;
+    justify-content: end;
+}
+
+.firstCol div{
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondCol div{
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+i{
+    font-weight: 900 !important;
+    font-size: large;
+    color: grey;
+}
+
+i:hover{
+    color: black;
+}
+
+.secondCol{
+    align-items: end;
+    justify-content: start;
+}
+
+.imgCont img{
+    width: 100%;
+    height: 100vh !important;
+    object-fit: cover;
+}
