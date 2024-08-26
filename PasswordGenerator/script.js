@@ -19,6 +19,7 @@ function generate(dorm) {
     const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
     const numberChars = "0123456789";
     const symbolChars = "!@#$%^&*()_+[]{}|;:,.<>?";
+    const allOfem = uppercaseChars + lowercaseChars + numberChars + symbolChars;
 
     let avaliableCharacters = "";
     let ActualpasswordXD = "";
@@ -76,7 +77,12 @@ function generate(dorm) {
         console.log(ActualpasswordXD);
         innerPassword.innerText = ActualpasswordXD;
     }else{
-        innerPassword.innerText = "";
+        
+        for (let k = 0; k < length; k++) {
+            const randomIndex = Math.floor(Math.random()*allOfem.length);
+            ActualpasswordXD = ActualpasswordXD + allOfem[randomIndex];
+        }
+        innerPassword.innerText = ActualpasswordXD;
     } 
 
     if(form){
