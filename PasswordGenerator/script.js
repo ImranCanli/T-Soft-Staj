@@ -6,7 +6,7 @@ var symbols = false;
 
 window.onload = (event) => {
 
-    document.getElementById('lenghtVal').defaultValue = 10;
+    document.getElementById('lenghtVal').defaultValue = 5;
 };
   
 
