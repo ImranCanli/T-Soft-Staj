@@ -66,7 +66,7 @@ function generate() {
         console.log(ActualpasswordXD);
         innerPassword.innerText = ActualpasswordXD;
     }else{
-        innerPassword.innerText = " 💜";
+        innerPassword.innerText = "";
     } 
 
     if(form){
