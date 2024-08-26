@@ -34,6 +34,7 @@ function generate(dorm) {
     const lid = document.getElementById('lid');
     const cube = document.getElementById('cube');
     const button = document.getElementById('generatePassword');
+    const Mobilebutton = document.getElementById('generatePasswordMobile');
     const password = document.getElementById('passwordContainer');
     const plate = document.getElementsByClassName('back')[0];
     // const length = document.getElementById('lenghtVal').value;
@@ -43,10 +44,10 @@ function generate(dorm) {
     
     cube.classList.toggle('whenStoppedCube');
     button.classList.toggle('buttonForm');
-
+    Mobilebutton.toggle('buttonForm');
 
     if(length === null){
-        length = 10;
+        length = 5;
     }
 
     const innerPassword = document.getElementById('password');
@@ -83,6 +84,7 @@ function generate(dorm) {
         password.classList.remove('passwordReveal');
         plate.classList.remove('upFront');
         button.innerHTML='<p>Get Password</p>';
+        Mobilebutton.innerHTML='<p>Get Password</p>';
         lid.classList.remove('whenStopped'); // Burada yavaşça açılma animasyonunu kaldırıyorum.
         lid.classList.add('whenStoppedSecond'); // WhenStoppedSecond sınıfı animasyonu kaldırıp kapağı bir anda kapatmak için.
         form = false;
@@ -105,6 +107,7 @@ function generate(dorm) {
             password.classList.add('passwordReveal');
         }, 1500);
         button.innerHTML = `<i class='bx bx-shuffle' ></i> Shuffle`;
+        Mobilebutton.innerHTML = `<i class='bx bx-shuffle' ></i> Shuffle`;
         form = true;
     }
     // console.log(form);
