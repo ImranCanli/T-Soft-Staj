@@ -378,8 +378,12 @@ body{
     width: 100%;
     height: 100px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    column-gap: 15px;
+    row-gap: 10px;
+    padding-top: 20px;
 }
 
 .plenght{
