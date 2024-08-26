@@ -16,26 +16,59 @@
 </head>
 <body>
     <h1 id="boom" class="flash">COPİED!</h1>
+    <div class="whereWereWe">
+        <div class="uppercaseStatus"></div>
+        <div class="lowercaseStatus"></div>
+        <div class="numberStatus"></div>
+        <div class="symbolStatus"></div>
+    </div>
+    <button onclick="toggleMobile()" class="menuButton" ><i class='bx bx-menu'></i></button>
+
+        <div class="mobileMenu">
+            <div class="mobileInner">
+                <div class="plenght">
+                    <p>Password length</p>
+                    <input min="5" max="10" type="number" id="lenghtValMobile" onclick="sychronize(2, this)">
+                </div>
+                <div class="topItem">
+                    <input type="checkbox" class="btn-check warning" id="uppercaseM" autocomplete="off" onclick="doTheCheckThing(1, 2)">
+                    <label class="btn btn-outline-warning uppercaseM" for="uppercaseM">Include Uppercase Characters</label><br>
+                </div>
+                <div class="topItem">
+                    <input type="checkbox" class="btn-check warning" id="lowercaseM" autocomplete="off" onclick="doTheCheckThing(2, 2)">
+                    <label class="btn btn-outline-warning lowercaseM" for="lowercaseM">Include Lowercase Characters</label><br>
+                </div>
+                <div class="topItem">
+                    <input type="checkbox" class="btn-check warning" id="numbersM" autocomplete="off" onclick="doTheCheckThing(3, 2)"> 
+                    <label class="btn btn-outline-warning numbersM" for="numbersM" >Include numbers</label><br>
+                </div>
+                <div class="topItem">
+                    <input type="checkbox" class="btn-check warning" id="symbolsM" autocomplete="off" onclick="doTheCheckThing(4, 2)">
+                    <label class="btn btn-outline-warning symbolsM" for="symbolsM">Include symbols</label><br>
+                </div>
+            </div>
+        </div>
+
     <div class="topContainer">
         <div class="plenght">
             <p>Password length</p>
-            <input min="5" max="10" type="number" id="lenghtVal">
+            <input min="5" max="10" type="number" id="lenghtVal" onclick="sychronize(1, this)">
         </div>
         <div class="topItem">
-            <input type="checkbox" class="btn-check warning" id="uppercase" autocomplete="off" onclick="doTheCheckThing(1)">
-            <label class="btn btn-outline-warning" for="uppercase">Include Uppercase Characters</label><br>
+            <input type="checkbox" class="btn-check warning" id="uppercase" autocomplete="off" onclick="doTheCheckThing(1, 1)">
+            <label class="btn btn-outline-warning uppercase" for="uppercase">Include Uppercase Characters</label><br>
         </div>
         <div class="topItem">
-            <input type="checkbox" class="btn-check warning" id="lowercase" autocomplete="off" onclick="doTheCheckThing(2)">
-            <label class="btn btn-outline-warning" for="lowercase">Include Lowercase Characters</label><br>
+            <input type="checkbox" class="btn-check warning" id="lowercase" autocomplete="off" onclick="doTheCheckThing(2, 1)">
+            <label class="btn btn-outline-warning lowercase" for="lowercase">Include Lowercase Characters</label><br>
         </div>
         <div class="topItem">
-            <input type="checkbox" class="btn-check warning" id="numbers" autocomplete="off" onclick="doTheCheckThing(3)"> 
-            <label class="btn btn-outline-warning" for="numbers">Include numbers</label><br>
+            <input type="checkbox" class="btn-check warning" id="numbers" autocomplete="off" onclick="doTheCheckThing(3, 1)"> 
+            <label class="btn btn-outline-warning numbers" for="numbers">Include numbers</label><br>
         </div>
         <div class="topItem">
-            <input type="checkbox" class="btn-check warning" id="symbols" autocomplete="off" onclick="doTheCheckThing(4)">
-            <label class="btn btn-outline-warning" for="symbols">Include symbols</label><br>
+            <input type="checkbox" class="btn-check warning" id="symbols" autocomplete="off" onclick="doTheCheckThing(4, 1)">
+            <label class="btn btn-outline-warning symbols" for="symbols">Include symbols</label><br>
         </div>
     </div>
     <div class="container">
@@ -57,7 +90,8 @@
         </div>
       </div>
 
-      <div id="generatePassword" class="generatePassword" onclick="generate()"><p>Get Password</p></div>
+      <div id="generatePassword" class="generatePassword" onclick="generate(1)"><p>Get Password</p></div>
+      <div id="generatePassword" class="generatePasswordMobile" onclick="generate(2)"><p>Get Password</p></div>
 
       <!-- <div class="ground"></div> -->
     <!-- <div class="chestcontainer">

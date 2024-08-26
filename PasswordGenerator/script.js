@@ -1,4 +1,5 @@
 var form = false;
+let mobileForm = false;
 var uppercase = false; 
 var lowercase = false;
 var numbers = false;
@@ -7,10 +8,11 @@ var symbols = false;
 window.onload = (event) => {
 
     document.getElementById('lenghtVal').defaultValue = 5;
+    document.getElementById('lenghtValMobile').defaultValue = 5;
 };
   
 
-function generate() {
+function generate(dorm) {
     // alert('sifre gonderiyorum !');
 
     const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -20,6 +22,13 @@ function generate() {
 
     let avaliableCharacters = "";
     let ActualpasswordXD = "";
+    let length;
+
+    if(dorm === 1){
+        length = document.getElementById('lenghtVal').value;
+    }else{
+        length = document.querySelector('#lenghtValMobile').value;
+    }
 
 
     const lid = document.getElementById('lid');
@@ -27,7 +36,7 @@ function generate() {
     const button = document.getElementById('generatePassword');
     const password = document.getElementById('passwordContainer');
     const plate = document.getElementsByClassName('back')[0];
-    const length = document.getElementById('lenghtVal').value;
+    // const length = document.getElementById('lenghtVal').value;
     const lights = document.getElementsByClassName('light');
 
     // console.log(' sifre uzunlugu: ' + length.value);
@@ -121,46 +130,190 @@ function copyPassword(){
     }, 1000);
 }
 
-function doTheCheckThing(incoming){
+function doTheCheckThing(incoming, mord){
 
-    switch (incoming) {
-        case 1:
-            
-        if(uppercase){
-            uppercase = false;
-        }else{
-            uppercase = true;
-        }
-        break;
-        case 2:
-            
-        if(lowercase){
-            lowercase = false;
-        }else{
-            lowercase = true;
-        }
+    console.log(mord);
 
-        break;
-        case 3:
+    // Masaüstü checkBox'lari
+    const uppercaseStatusD = document.querySelector('#uppercase');
+    const lowercaseStatusD = document.querySelector('#lowercase');
+    const numberStatusD = document.querySelector('#numbers');
+    const symbolStatusD = document.querySelector('#symbols');
 
-        if(numbers){
-            numbers = false;
-        }else{
-            numbers = true;
-        }        
-            
-        break;
-        case 4:
-            
-        if(symbols){
-            symbols = false;
-        }else{
-            symbols = true;
+    //Mobile chechkBox'lari
+    const uppercaseStatusM = document.querySelector('#uppercaseM');
+    const lowercaseStatusM = document.querySelector('#lowercaseM');
+    const numberStatusM = document.querySelector('#numbersM');
+    const symbolStatusM = document.querySelector('#symbolsM');
+
+
+    const uppercaseStatus = document.querySelector('.uppercaseStatus');
+    const lowercaseStatus = document.querySelector('.lowercaseStatus');
+    const numberStatus = document.querySelector('.numberStatus');
+    const symbolStatus = document.querySelector('.symbolStatus');
+
+    if(mord === 1){
+        // const uppercaseStatus = document.querySelector('.uppercaseStatus');
+        // const lowercaseStatus = document.querySelector('.lowercaseStatus');
+        // const numberStatus = document.querySelector('.numberStatus');
+        // const symbolStatus = document.querySelector('.symbolStatus');
+
+
+        switch (incoming) {
+            case 1:
+
+            if(uppercase){
+                uppercase = false;
+                uppercaseStatusM.checked = false;
+                uppercaseStatus.classList.remove('itsAlive');
+
+            }else{
+                uppercase = true;
+                uppercaseStatusM.checked = true; //Burası sıkıntılı degil artik :)))
+                // uppercaseStatusM.classList.add('activeCheck'); //Burası sıkıntılı
+                uppercaseStatus.classList.add('itsAlive');
+            }
+            break;
+            case 2:
+                
+            if(lowercase){
+                lowercase = false;
+                lowercaseStatusM.checked = false;
+                lowercaseStatus.classList.remove('itsAlive');
+            }else{
+                lowercase = true;
+                lowercaseStatusM.checked = true;
+                lowercaseStatus.classList.add('itsAlive');
+            }
+    
+            break;
+            case 3:
+    
+            if(numbers){
+                numbers = false;
+                numberStatusM.checked = false;
+                numberStatus.classList.remove('itsAlive');
+            }else{
+                numbers = true;
+                numberStatusM.checked = true;
+                numberStatus.classList.add('itsAlive');
+            }        
+                
+            break;
+            case 4:
+                
+            if(symbols){
+                symbols = false;                
+                symbolStatusM.checked = false;
+                symbolStatus.classList.remove('itsAlive');
+            }else{
+                symbols = true;
+                symbolStatusM.checked = true;
+                symbolStatus.classList.add('itsAlive');
+            }
+            break;
+            default:
+            break;
         }
-        break;
-        default:
-        break;
+    }else{
+
+        // Mobile icin kapalı acik gostergeleri
+        // const uppercaseStatus = document.querySelector('.uppercaseStatus');
+        // const lowercaseStatus = document.querySelector('.lowercaseStatus');
+        // const numberStatus = document.querySelector('.numberStatus');
+        // const symbolStatus = document.querySelector('.symbolStatus');
+
+        switch (incoming) {
+            case 1:
+                
+            if(uppercase){
+                uppercase = false;
+                uppercaseStatusD.checked = false;
+                uppercaseStatus.classList.remove('itsAlive');
+            }else{
+                uppercase = true;
+                uppercaseStatusD.checked = true;
+                uppercaseStatus.classList.add('itsAlive');
+            }
+            break;
+            case 2:
+                
+            if(lowercase){
+                lowercase = false;
+                lowercaseStatusD.checked = false;
+                lowercaseStatus.classList.remove('itsAlive');
+            }else{
+                lowercase = true;
+                lowercaseStatusD.checked = true;
+                lowercaseStatus.classList.add('itsAlive');
+            }
+            break;
+            case 3:
+    
+            if(numbers){
+                numbers = false;
+                numberStatusD.checked = false;
+                numberStatus.classList.remove('itsAlive');
+            }else{
+                numbers = true;
+                numberStatusD.checked = true;
+                numberStatus.classList.add('itsAlive');
+            }        
+            break;
+            case 4:
+                
+            if(symbols){
+                symbols = false;
+                symbolStatusD.checked = false;                
+                symbolStatus.classList.remove('itsAlive');
+            }else{
+                symbols = true;
+                symbolStatusD.checked = true;
+                symbolStatus.classList.add('itsAlive');
+            }
+            break;
+            default:
+            break;
+        }
     }
 
     console.log('degerler soyle ; uppercase: ' + uppercase + ', lowercase: ' + lowercase + ', numbers: ' + numbers + ', symbols: ' + symbols);
+}
+
+function toggleMobile(){
+
+    document.querySelector('.mobileMenu').classList.toggle('mobileOpen');
+    const topItems = document.querySelectorAll('.topItem');
+
+
+    if(mobileForm){
+        // Burasi da kapanirken calisicak
+        setTimeout(() => {
+            // document.querySelectorAll('.topItem').classList.remove('slideIn');
+            document.querySelector('.plenght').classList.remove('slideIn');
+            for (let k = 0; k < topItems.length; k++) {
+                topItems[k].classList.remove('slideIn');
+            }
+            mobileForm= false;
+        }, 100);    
+    }else{
+        // Burasi acilirken calisicak
+        setTimeout(() => {
+            // document.querySelectorAll('.topItem').classList.add('slideIn');
+            document.querySelector('.plenght').classList.add('slideIn');
+            for (let k = 0; k < topItems.length; k++) {
+                topItems[k].classList.add('slideIn');
+            }
+            mobileForm= true;
+        }, 100);    
+    }
+}
+
+function sychronize(mobieOrDesktop, element){
+
+    if(mobieOrDesktop === 1){
+        document.querySelector('#lenghtValMobile').value = element.value; 
+    }else{
+        document.querySelector('#lenghtVal').value = element.value;
+    }
 }
