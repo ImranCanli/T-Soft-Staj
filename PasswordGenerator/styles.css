@@ -1,0 +1,425 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    font-family: 'New Amsterdam';
+}
+
+.chest{
+    width: 500px;
+    height: 300px;
+    background: 
+    linear-gradient(135deg, transparent 30px, brown 0) top left,
+    linear-gradient(-135deg, transparent 30px, brown 0) top right,
+    linear-gradient(45deg, transparent 30px, brown 0) bottom left,
+    linear-gradient(-45deg, transparent 30px, brown 0) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+}
+
+.chestcontainer{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background-color: gold;
+    /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+}
+
+@keyframes turn {
+    from { transform: rotate3d(0, 0, 0, 0); }
+    to { transform: rotate3d(1, 1, 0, 360deg); }
+  }
+
+@keyframes stop {
+    /* from {transform: rotate3d(1, 1, 0, 360deg);}
+    to { transform: rotateX(340deg) rotateY(-360deg);} */
+
+    0%{
+        transform: rotate3d(1, 1, 0, 360deg);
+    }
+    /* 50%{
+        transform: rotateX(340deg) rotateY(180deg);
+    } */
+    100%{
+        /* transform: rotate3d(1, 1, 0, 360deg); */
+        transform: rotateX(340deg) rotateY(180deg);
+    }
+}
+
+@keyframes colorfullworld {
+    0%{
+        border: 2px solid deepskyblue; 
+    }
+    20%{
+        border: 2px solid springgreen; 
+    }
+    40%{
+        border: 2px solid red; 
+    }
+    60%{
+        border: 2px solid white; 
+    }
+    80%{
+        border: 2px solid blue; 
+    }
+    90%{
+        border: 2px solid darkorchid; 
+    }
+    100%{
+        border: 2px solid cyan; 
+    }
+}
+
+  .container {
+    width: 200px;
+    height: 200px;
+    perspective: 500px;
+    margin: 100px;
+  }
+  
+  .cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transition: all 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    animation: turn 5s linear infinite;
+    transform: rotateX(340deg) rotateY(180deg);
+  }
+  
+  .innerBorder p{
+    font-family: 'Roboto';
+  }
+
+  .face {
+    /* width: 200px;
+    height: 200px; */
+    /* border: 2px solid gold; */
+    position: absolute;
+    /* opacity: 0.5; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    border: 2px solid blue;
+    animation-name: colorfullworld;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transition: transform 500ms;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+  
+  .chestcontainer i{
+    color: white;
+    font-size: 200px;
+    font-weight: bold;
+  }
+
+  .generatePassword{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gold;
+    color: white;
+    font-weight: bold;
+    font-family: 'New Amsterdam';
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .generatePassword p {
+    margin: 0 !important;
+  }
+
+  .generatePassword:hover{
+    background-color: gold;
+    color: black;
+  }
+
+  .front {
+    transform: translateZ(100px);
+  }
+  
+  .back {
+    transform: translateZ(-100px) rotateY(180deg);
+  }
+  
+  .left {
+    transform: translateX(-100px) rotateY(-90deg);
+  }
+  
+  .right {
+    transform: translateX(100px) rotateY(90deg);
+  }
+  
+  .top {
+    transition: all 1s ease-in-out;
+    transform: translateY(-100px) rotateX(90deg);
+    /* transform-origin: bottom; */
+    /* transform: translateY(-100px) rotateX(90deg); */
+    /*Burası !! */
+  }
+
+  .flash{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 500px;
+    color: white;
+    z-index: 0;
+    opacity: 0.5;
+    transition: opacity 0.6s ease-out;
+    letter-spacing: 100px;
+    display: none;
+    margin-left: 50px;
+  }
+
+  .flashOpen{
+    display: block;
+  }
+
+  .fadeAwayLikeMyDreams{
+    opacity: 0;
+  }
+
+  .lidOpen{
+    animation-name: openClose;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+
+  .bottom {
+    transform: translateY(100px) rotateX(-90deg);
+  }
+
+  .whenStopped{
+    transform-origin: top;
+    transform: translate(0px, -120px) rotateX(40deg);
+  }
+  
+  .whenStoppedCube{
+    animation-name: stop;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+
+    /* transform: translate3d(0ch, 0.4in, 5em) rotateX(340deg) rotateY(180deg); */
+  }
+
+  .whenStoppedSecond{
+    transform-origin: center;
+    transition: all 0s ease;
+    transform: translateY(-100px) rotateX(90deg);
+  }
+
+  .buttonForm{
+    border: 1px solid red;
+    color: white;
+  } 
+
+  .buttonForm:hover{
+    background-color: red;
+    color: black;
+  }
+
+  .topItem{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .topItem > *{
+    display: inline;
+  }
+
+  .topItem p{
+    margin-left: 10px;
+    color: gold;
+  }
+
+  .topItem input{
+    background-color: black;
+    border: 1px solid  gold;
+  }
+
+  .topItem input:active{
+    color: black;
+  }
+
+  .upFront{
+    z-index: 1;
+  }
+
+  .passwordContainer{
+    width: 100px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color: black;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  .passwordReveal{
+    top: -35%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 190px;
+    height: 50px;
+  }
+
+  .innerBorder{
+    width: 95%;
+    height: 95%;
+    border-radius: 10px;
+    border: 1px solid gold; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: rotateY(180deg);
+    letter-spacing: 2px;
+    padding: 5px 10px;
+  }
+
+  .innerBorder p {
+    margin: 0 !important;
+  }
+
+  .light{
+    width: 0px;
+    height: 0px;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    background-color: blue;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    transform-origin: bottom;
+    opacity: 0.7;
+    z-index: 0;
+    box-shadow: 0 0 75px 30px yellow;
+  }
+
+  .first{
+    transform: translate(-50%, -50%) rotate(-30deg);
+  }
+
+  .second{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  .third{
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+
+  .fourth{
+    transform: translate(-50%, -50%) rotate(40deg);
+  }
+
+  .risenShine{
+    top: 10%;
+  }
+
+  .copy{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: auto 0; */
+    background-color: #ffc107;
+    color: black;
+    outline: none;
+    border: none;
+  }
+
+  .copy:hover{
+    border: 1px solid #ffc107;
+    background-color: black;
+    color: gold;
+  }
+
+  .topContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.plenght{
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #ffc107;
+    color: #ffc107;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.plenght p {
+    margin: 0;
+}
+
+.plenght input{
+    width: 40px;
+    height: 20px;
+}
+
+.ground{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: skew(60deg);
+    background-color: white;
+    z-index: -1;
+    background: rgb(255,206,58);
+    background: radial-gradient(circle, rgba(255,206,58,1) 0%, rgba(0,0,0,0.9887604700083158) 49%);
+}
+
+  @media (prefers-reduced-motion: reduce) {
+    .cube {
+      animation: none;
+      transform: rotate3d(1, 1, 0, 45deg);
+    }
+  }
+
