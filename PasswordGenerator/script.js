@@ -44,7 +44,7 @@ function generate(dorm) {
     
     cube.classList.toggle('whenStoppedCube');
     button.classList.toggle('buttonForm');
-    Mobilebutton.toggle('buttonForm');
+    Mobilebutton.classList.toggle('buttonForm');
 
     if(length === null){
         length = 5;
