@@ -1,103 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoText</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
-
-<body>
-
-<header id="navbar">
-  <h1>Portfolio</h1>
-  <i class='bx bxs-left-arrow duzenle'></i>
-  <div class="forlayout">
-    <!-- <i class='bx bxs-left-arrow duzenle'></i> -->
-      
-    <div class="linkler">
-    <a href="#welcome-section">Hosgeldiniz</a>
-    <a href="#projects">Projelerim</a>
-    <a href="#footer">Iletisim</a>
-  </div>
-  </div>
-
-</header>
-  <section id="welcome-section">
-    <div class="egdir"><p>Merhaba</p>
-    <h1>IMRAN CANLI</h1>
-    <p>Ben bir bilgisayar mühendisi <strong class="wihte">adayiyim</strong>. Kendimi gelistirmeye calisiyorum</p>
+<body class="pick">
+    <div class="navigator">
+        <div class="navigateTitle">Calismalarim</div>
+        <div class="dotInner" onclick="scrollDown(3)"><i class='bx bx-chevron-down'></i></div>
+        <div class="navigateTitle">Iletisim</div>
+        <div class="dotInner" onclick="goUp()" style="display: none;"><i class='bx bx-chevron-up'></i></div>
+        <div class="navigateTitle"></div>
+        <div class="dotInner" onclick="scrollDown(1)"><i class='bx bx-chevron-down ' ></i></div>
     </div>
-  </section>
-  <section id="projects" >
-    <div>
-      <h3>Projects</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<strong>Projelerin tamamını görmek için projer kısmını aşağı doğru kaydırın.</strong></p></div>
-    <div class="edgiryeni">
-      <div class="project-tile">
-        <div class="bg-sari"><img src="./Images/Blink-Preview.png" class="obje"/></div>
-        <div class="bg-beyaz"><a href="https://github.com/ImranCanli/T-Soft-Staj/Blink/">T-Soft-Staj ilk proje</a></div>
-      </div>
-      <div class="project-tile">
-        <div class="bg-sari"><img src="./Images/Diamond-Preview.png" class="obje"/></div>
-        <div class="bg-beyaz"><a href="https://imrancanli.github.io/T-Soft-Staj/Diamond/">T-Soft-Staj ikinci proje</a></div>
-      </div>
-      <div class="project-tile">
-        <div class="bg-sari"><img src="./Images/Frog-Preview.png" class="obje"/></div>
-        <div class="bg-beyaz"><a href="https://imrancanli.github.io/T-Soft-Staj/Frog/">T-Soft-Staj ucuncu proje</a></div>
-      </div>
-      <div class="project-tile">
-        <div class="bg-sari"><img src="./Images/Target-Preview.png" class="obje"/></div>
-        <div class="bg-beyaz"><a href="https://imrancanli.github.io/T-Soft-Staj/BullsEye/">T-Soft-Staj dorduncu proje</a></div>
-      </div>
-      <div class="project-tile">
-        <div class="bg-sari"><img src="./Images/tailwind-header-preview.png" class="obje"/></div>
-        <div class="bg-beyaz"><a href="https://github.com/ImranCanli/T-Soft-Staj/tree/main/TailwindNavbar">T-Soft-Staj besinci proje</a></div>
-      </div>
-      <div class="project-tile">
-        <div class="bg-sari"><img src="./Images/Clock-Preview.png" class="obje"/></div>
-        <div class="bg-beyaz"><a href="https://imrancanli.github.io/T-Soft-Staj/Clock/">T-Soft-Staj altinci proje</a></div>
-      </div>
-      <div class="project-tile">
-        <div class="bg-sari"><img src="./Images/ToDo-Preview.png" class="obje"/></div>
-        <div class="bg-beyaz"><a href="https://github.com/ImranCanli/T-Soft-Staj/tree/main/todo">T-Soft-Staj yedinci proje</a></div>
-      </div>
-      <div class="project-tile">
-        <div class="bg-sari"><img src="./Images/splitLanding-Preview.png" class="obje"/></div>
-        <div class="bg-beyaz"><a href="https://imrancanli.github.io/T-Soft-Staj/SplitPage/">T-Soft-Staj sekizinci proje</a></div>
-      </div>
-      <div class="project-tile">
-        <div class="bg-sari"><img src="./Images/GitHubSearch-Preview.png" class="obje"/></div>
-        <div class="bg-beyaz"><a href="https://github.com/ImranCanli/T-Soft-Staj/tree/main/GitHubSearch">T-Soft-Staj dokuzuncu proje</a></div>
-      </div>
-      <div class="project-tile">
-        <div class="bg-sari"><img src="./Images/vertical-slider-preview.png" class="obje"/></div>
-        <div class="bg-beyaz"><a href="https://imrancanli.github.io/T-Soft-Staj/VerticalSlider/">T-Soft-Staj onuncu proje</a></div>
-      </div>
-      <div class="project-tile">
-        <div class="bg-sari"><img src="./Images/password-generator.png" class="obje"/></div>
-        <div class="bg-beyaz"><a href="https://imrancanli.github.io/T-Soft-Staj/PasswordGenerator/">T-Soft-Staj on birinci proje</a></div>
-      </div>
-      <div class="project-tile">
-        <div class="bg-sari"><img src="./Images/results-summary-preview.png" class="obje"/></div>
-        <div class="bg-beyaz"><a href="https://imrancanli.github.io/T-Soft-Staj/ResultSummary/">T-Soft-Staj on ikinci proje</a></div>
-      </div>
-      <div class="project-tile">
-        <div class="bg-sari"><img src="./Images/loadingIndicator.png" class="obje"/></div>
-        <div class="bg-beyaz"><a href="https://imrancanli.github.io/T-Soft-Staj/loadingIndicator/">T-Soft-Staj on ucuncu proje</a></div>
-      </div>
-
-      <!--Son Link= "https://imrancanli.github.io/T-Soft-Staj/loadingIndicator/"-->
+    <section class="showcase">
+        <h1 class="greetings">MERHABA!</h1>
+        <video src="/assets/background-video-light-space.mp4" autoplay loop muted></video>
+        <h1 class="title">IMRAN CANLI</h1>
+        <h1 class="small">IMRAN</h1>
+        <h1 class="small">CANLI</h1>
+        <h4 class="whoAmI">HAKKIMDA</h4>
+        <p class="nonsense">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <!-- <div class="dot">
+                <div class="dotInner"><i class='bx bx-chevron-down'></i></div>
+                <p>About Me</p>    
+                <span class="line"></span>
+            </div> -->
+    </section>
+    <div class="projects">
+        <div class="previewContainer">
+            <div class="proje">
+                <img src="/assets/Blink-Preview.png" style="filter: grayscale(1);">
+                <div class="overview">
+                    <p>T-Soft staj birinci task</p>
+                    <a href="https://github.com/ImranCanli/T-Soft-Staj/Blink/">Onizleme</a>
+                </div>
+            </div>
+            <div class="proje">
+                <img src="/assets/Diamond-Preview.png" style="filter: grayscale(1);">
+                <div class="overview">
+                    <p>T-Soft staj ikinci task</p>
+                    <a href="https://imrancanli.github.io/T-Soft-Staj/Diamond/">Onizleme</a>
+                </div>
+            </div>
+            <div class="proje">
+                <img src="/assets/Frog-Preview.png" style="filter: grayscale(1);">
+                <div class="overview">
+                    <p>T-Soft staj ucuncu task</p>
+                    <a href="https://imrancanli.github.io/T-Soft-Staj/Frog/">Onizleme</a>
+                </div>
+            </div>
+            <div class="proje" style="grid-column: 1 / span 2;">
+                <img src="/assets/Target-Preview.png" style="filter: grayscale(1);">
+                <div class="overview">
+                    <p>T-Soft staj dorduncu task</p>
+                    <a href="https://imrancanli.github.io/T-Soft-Staj/BullsEye/">Onizleme</a>
+                </div>
+            </div>
+            <div class="proje">
+                <img src="/assets/tailwind-header-preview.png" style="filter: grayscale(1);">
+                <div class="overview">
+                    <p>T-Soft staj besinci task</p>
+                    <a href="https://github.com/ImranCanli/T-Soft-Staj/tree/main/TailwindNavbar">Onizleme</a>
+                </div>
+            </div>
+            <div class="proje">
+                <img src="/assets/Clock-Preview.png" style="filter: grayscale(1);">
+                <div class="overview">
+                    <p>T-Soft staj altinci task</p>
+                    <a href="https://imrancanli.github.io/T-Soft-Staj/Clock/">Onizleme</a>
+                </div>
+            </div>
+            <div class="proje">
+                <img src="/assets/ToDo-Preview.png" style="filter: grayscale(1);">
+                <div class="overview">
+                    <p>T-Soft staj yedinci task</p>
+                    <a href="https://github.com/ImranCanli/T-Soft-Staj/tree/main/todo">Onizleme</a>
+                </div>
+            </div>
+            <div class="proje">
+                <img src="/assets/splitLanding-Preview.png" style="filter: grayscale(1);">
+                <div class="overview">
+                    <p>T-Soft staj sekizinci task</p>
+                    <a href="https://imrancanli.github.io/T-Soft-Staj/SplitPage/">Onizleme</a>
+                </div>
+            </div>
+            <div class="proje" style="grid-column: 1 / span 2;">
+                <img src="/assets/GitHubSearch-Preview.png" style="filter: grayscale(1);">
+                <div class="overview">
+                    <p>T-Soft staj dokuzuncu task</p>
+                    <a href="https://github.com/ImranCanli/T-Soft-Staj/tree/main/GitHubSearch">Onizleme</a>
+                </div>
+            </div>
+            <div class="proje">
+                <img src="/assets/vertical-slider-preview.png" style="filter: grayscale(1);"> 
+                <div class="overview">
+                    <p>T-Soft staj onuncu task</p>
+                    <a href="https://imrancanli.github.io/T-Soft-Staj/VerticalSlider/">Onizleme</a>
+                </div>
+            </div>
+            <div class="proje">
+                <img src="/assets/password-generator.png" style="filter: grayscale(1);">
+                <div class="overview">
+                    <p>T-Soft staj on birinci task</p>
+                    <a href="https://imrancanli.github.io/T-Soft-Staj/PasswordGenerator/">Onizleme</a>
+                </div>
+            </div>
+            <div class="proje" style="grid-column: 2 / span 2;">
+                <img src="/assets/results-summary-preview.png" style="filter: grayscale(1);">
+                <div class="overview">
+                    <p>T-Soft staj on ikinci task</p>
+                    <a href="https://imrancanli.github.io/T-Soft-Staj/ResultSummary/">Onizleme</a>
+                </div>
+            </div>
+            <div class="proje">
+                <img src="/assets/loadingIndicator.png" style="filter: grayscale(1);">
+                <div class="overview">
+                    <p>T-Soft staj on ucuncu task</p>
+                    <a href="https://imrancanli.github.io/T-Soft-Staj/loadingIndicator/">Onizleme</a>
+                </div>
+            </div>
+        </div>
+        <img class="bgImg" src="/assets/Mountain-blue.png">
     </div>
-  </section>
-  <section id="footer">
-    <h2>Bana ulaşın;</h2>
-    <p>- 05363738765 - </p>
-    <p>- imrancanli246@gmail.com - </p>
-    <p>Beni <a id="profile-link" target="_blank" href="https://github.com/ImranCanli">Github</a>'da bulun. </p>
-    
-  </section>
+    <div class="footer">
+        <h2>ILETISIM</h2>
+        <div class="linkContainer">
+            <div class="links">
+                <img src="/assets/linkedn-logo.png">
+                <a href="https://www.linkedin.com/in/imran-canl%C4%B1-350692267/" target="_blank">Linkedn</a>
+            </div>
+            <div class="links">
+                <img src="/assets/github-logo.png">
+                <a href="https://github.com/ImranCanli" target="_blank">Github</a>
+            </div>
+            <div class="links">
+                <img src="/assets/mail-icon.png">
+                <a href="#" target="_blank">imrancanli246@gmail.com</a>
+            </div>
+        </div>
+    </div>
+    <div class="scrollUp" onclick="goUp()"><i class='bx bx-chevron-up' ></i></div>
+    <script src="script.js"></script>
 </body>
 </html>
