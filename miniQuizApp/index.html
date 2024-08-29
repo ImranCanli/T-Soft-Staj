@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miniQuizApp</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chameleon"></div>
+    <div class="warning"><i class='bx bx-error'></i><p>Isaretleme yapin</p></div>
+    <div class="questionContainer">
+        <div class="questionBody">
+            <p class="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="multipleChoice">
+                <div class="choiceContainer" data-choice="1" onclick="pickAnswer(0, this)">
+                    <p>Ilk secenek</p>
+                </div>
+                <div class="choiceContainer" data-choice="2" onclick="pickAnswer(1, this)">
+                    <p>Ikinci secenek</p>
+                </div>
+                <div class="choiceContainer" data-choice="3" onclick="pickAnswer(2, this)">
+                    <p>Ucuncu secenek</p>
+                </div>
+                <div class="choiceContainer" data-choice="4" onclick="pickAnswer(3, this)">
+                    <p>Dorduncu secenek</p>
+                </div>
+            </div>
+        </div>
+        <div class="button" onclick="changeQuestion()">ONAY</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

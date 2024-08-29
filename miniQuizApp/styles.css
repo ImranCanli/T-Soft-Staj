@@ -1,0 +1,219 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* transition: all 0.3s ease-in-out; */
+}
+
+.firstQ{
+    background: linear-gradient(13deg, rgba(255,255,255,1) 26%, rgba(165,62,249,1) 79%);
+}
+.secondQ{
+    background: linear-gradient(343deg, rgba(255,255,255,1) 26%, rgba(165,62,249,1) 79%);
+}
+.thirdQ{
+    background: linear-gradient(203deg, rgba(255,255,255,1) 26%, rgba(165,62,249,1) 79%);
+}
+.fourthQ{
+    background: linear-gradient(180deg, rgba(255,255,255,1) 26%, rgba(165,62,249,1) 79%);
+}
+
+.questionContainer{
+    position: relative;
+    width: 40%;
+    height: 50%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    font-family: 'New Amsterdam';
+    box-sizing: border-box;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    z-index: 1;
+    background-color: white;
+}
+
+.question{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    height: min-content;
+    font-size: 22px;
+    margin-bottom: 35px;
+}
+
+.questionBody{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.multipleChoice{
+    width: 100%;
+    height: 60%;
+    /* padding-left: 20px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.choiceContainer{
+    width: 100%;
+    padding: 10px;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 0px;
+    /* transition: all 0.1s ease-in; */
+}
+
+.warning{
+    position: absolute;
+    top: 10%;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-300%);
+    width: 20%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: red;
+}
+
+.warning i {
+    font-size: 20px;
+
+}
+
+.warning p{
+    margin-left: 30px;
+    font-family: 'New Amsterdam';
+}
+
+.button{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    margin: 0;
+    padding: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover{
+    background-color: blueviolet;
+}
+
+.button:active{
+    transform: scale(0.9);
+    background-color:#7A1CAC;
+}
+
+.selected{
+    border: 2px solid blueviolet;
+    margin: -2px;
+}
+
+.result{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .result i {
+
+} */
+
+.happy{
+    margin-top: 30px;
+    font-size: 40px;
+    color: black;
+    animation-name: dreams;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.sorry{
+    font-size: 40px;
+    margin-top: 30px;
+    color: black;
+}
+
+.chameleon{
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    background: rgb(255,255,255);
+    position: absolute;
+}
+
+@keyframes dreams {
+    0%{
+        color: red;
+    }
+    10%{
+        color: cyan;
+    }
+    20%{
+        color: greenyellow;
+    }
+    30%{
+        color: blue;
+    }
+    40%{
+        color: purple;
+    }
+    50%{
+        color: deeppink;
+    }
+    60%{
+        color: orange;
+    }
+    70%{
+        color: yellow;
+    }
+    80%{
+        color: violet;
+    }
+    90%{
+        color: crimson;
+    }
+    100%{
+        color: lightpink;
+    }
+}
