@@ -6,6 +6,9 @@ let likeCount = 0;
 //     clickCount === 0 ? clickCount += 1 : likedIt(element);
 // }
 
+window.onload = (event) => {
+    document.querySelector('.bisey').textContent = `${localStorage.likes.length}`;
+  };  
 
 //Arrow fonksiyonunu override ettim. Ama calismadi :/
 function likeImage(element, event) {
@@ -43,8 +46,8 @@ const likedIt = (el, xCoordinate, yCoordinate) => {
         //el.innerHTML = '';
         el.querySelector('.animationClass').remove();
     }, 500);
-
-    document.querySelector('.bisey').textContent = likeCount;
+    localStorage.likes += 1;
+    document.querySelector('.bisey').textContent = `${localStorage.likes.length}`;
     clickCount = 0;
     // console.log('Burada islemler yapilabilir. Container genisligi :' + imageW + ', Container yuksekligi :' + imageH);
 }
